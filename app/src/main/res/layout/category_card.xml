@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="transport"
+            type="com.gama.task.models.Budgets.BudgetsResponse" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x10dp"
+                android:layout_marginTop="@dimen/x5dp"
+                android:layout_marginRight="@dimen/x10dp"
+                android:layout_marginBottom="@dimen/x5dp"
+                android:background="@drawable/custom_card">
+
+                <ImageView
+                    android:id="@+id/IV_categoryCard"
+                    android:layout_width="@dimen/x80dp"
+                    android:layout_height="@dimen/x80dp"
+                    android:layout_marginStart="@dimen/x25dp"
+                    android:layout_marginTop="@dimen/x15dp"
+                    android:layout_marginBottom="@dimen/x15dp"
+                    android:background="@drawable/card_img_circule"
+                    android:padding="@dimen/x10dp"
+                    android:src="@drawable/ic_game_recharge"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_catogory_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recharge games"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_categoryCard_des"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/IV_categoryCard"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_categoryCard_des"
+                    android:layout_width="@dimen/x160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/x10dp"
+                    android:lines="2"
+
+                    android:text="Xbox/FIFA/PUBG dfdfdfdfd ddfdsfdssdfsdfsfsfsfs "
+                    android:textAlignment="center"
+                    android:textColor="@color/fontColorCardDes"
+                    android:textSize="@dimen/txt_small"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/IV_categoryCard"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_catogory_name" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/x60dp"
+            android:layout_marginTop="@dimen/x2dp"
+            android:layout_marginRight="@dimen/x60dp"
+            android:layout_marginBottom="@dimen/x2dp"
+            android:background="#FFFFFF" />
+    </LinearLayout>
+</layout>
